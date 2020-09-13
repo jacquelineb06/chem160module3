@@ -1,3 +1,4 @@
+import sys
 from PIL import Image, ImageDraw
 def drawgrid(grid,side):
     scale=5
@@ -13,4 +14,7 @@ def drawgrid(grid,side):
                 draw.rectangle(((x0,y0),(x1,y1)),(0,0,0))
     img.show()
     return
-##Add code here
+from random import choice
+n=20
+list2d=[[choice((0,1)) for x in range(n)] for y in range(n)]
+drawgrid(list2d,n)

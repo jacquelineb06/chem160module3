@@ -5,9 +5,12 @@ nstates=4
 states=[0]*nstates
 T=3
 ntrials=10000
-
-#Insert code from lecture notes here
-
+for trial in range (ntrials):
+        newstate=choice(range(nstates))
+        x=exp(-(newstate-state)/T)
+        if x>random():
+            state=newstate
+        states[state]+=1
 Boltz=[0]*nstates
 partition=0.
 for i in range(nstates):
